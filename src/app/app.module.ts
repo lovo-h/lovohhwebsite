@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {
   SharedModule,
+  FooterComponent,
   NavbarComponent
 } from './shared';
 
@@ -12,7 +13,8 @@ import {
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,15 +1,22 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { SharedModule, NavbarComponent } from './shared';
+import {
+  SharedModule,
+  FooterComponent,
+  NavbarComponent
+} from './shared';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent, NavbarComponent],
+      declarations: [
+        AppComponent,
+        FooterComponent,
+        NavbarComponent],
       imports: [SharedModule]
     }).compileComponents();
   }));
-  it('should create the app', async(() => {
+  it('should create the App', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
