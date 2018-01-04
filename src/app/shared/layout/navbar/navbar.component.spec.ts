@@ -1,7 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { APP_BASE_HREF } from '@angular/common';
+import { HomeComponent } from '../../../home/home.component';
 import { NavbarComponent } from './navbar.component';
 import { SharedModule } from '../../shared.module';
+
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
@@ -9,8 +12,9 @@ describe('NavbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [NavbarComponent],
-      imports: [SharedModule]
+      declarations: [NavbarComponent, HomeComponent],
+      imports: [SharedModule],
+      providers: [{provide: APP_BASE_HREF, useValue : '/' }],
     })
       .compileComponents();
   }));

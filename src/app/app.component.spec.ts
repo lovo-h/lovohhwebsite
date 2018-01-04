@@ -1,10 +1,14 @@
 import { TestBed, async } from '@angular/core/testing';
+import { APP_BASE_HREF } from '@angular/common';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import {
   SharedModule,
+
   FooterComponent,
   NavbarComponent
 } from './shared';
+
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -12,8 +16,11 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         FooterComponent,
-        NavbarComponent],
-      imports: [SharedModule]
+        HomeComponent,
+        NavbarComponent,
+      ],
+      imports: [SharedModule],
+      providers: [{provide: APP_BASE_HREF, useValue : '/' }],
     }).compileComponents();
   }));
   it('should create the App', async(() => {
