@@ -36,6 +36,28 @@ jobs:
           <<: *restore_cache_defaults
       - run: npm run test
 
+  deploy:
+    <<: *defaults
+    steps:
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Install Docker client
+          command: |
+            set -x
+            VER="17.11.0-ce"
+            curl -L -o /tmp/docker-$VER.tgz https://get.docker.com/builds/Linux/x86_64/docker-$VER.tgz
+            tar -xz -C /tmp -f /tmp/docker-$VER.tgz
+            sudo mv /tmp/docker/* /usr/bin
+      - run:
+          name: Push to DockerHub
+          command: |
+            docker build -f ./Dockerfile -t lovohh/lovohhwebsite:$CIRCLE_SHA1 .
+            docker login -u $DH_USER -p $DH_PASS
+            docker push lovohh/lovohhwebsite:$CIRCLE_SHA1
+
+
 workflows:
   version: 2
   build_and_test:
@@ -44,3 +66,10 @@ workflows:
       - test:
           requires:
             - build
+      - hold:
+          type: approval
+          requires:
+            - test
+      - deploy:
+          requires:
+            - hold
