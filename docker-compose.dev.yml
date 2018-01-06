@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+    # =-=-=-=-= ANGULAR =-=-=-=-=
+    angular:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      container_name: lovohhwebsite_angular2
+      ports:
+        - "4200:4200"
+      volumes:
+        - .:/home/app/lovohhwebsite
+        - /home/app/lovohhwebsite/node_modules
