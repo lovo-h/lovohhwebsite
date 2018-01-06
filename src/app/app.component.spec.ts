@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { Status404Component } from './status404/status404.component';
 import {
   SharedModule,
+  FlipcardComponent,
   FooterComponent,
   NavbarComponent
 } from './shared';
@@ -27,6 +28,7 @@ describe('AppComponent', () => {
         ContactComponent,
         Status404Component,
         NavbarComponent,
+        FlipcardComponent
       ],
       imports: [SharedModule],
       providers: [{provide: APP_BASE_HREF, useValue : '/' }],

@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SharedModule } from '../../shared.module';
+import { SharedModule, FlipcardComponent } from '../../';
 import { FooterComponent } from './footer.component';
 
 import { HomeComponent } from '../../../home/home.component';
@@ -26,7 +26,8 @@ describe('FooterComponent', () => {
         ProjectsComponent,
         BlogComponent,
         ContactComponent,
-        Status404Component
+        Status404Component,
+        FlipcardComponent
       ],
       imports: [ SharedModule ],
       providers: [{provide: APP_BASE_HREF, useValue : '/' }],

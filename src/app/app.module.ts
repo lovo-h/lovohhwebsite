@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { Status404Component } from './status404/status404.component';
 import {
   SharedModule,
+  FlipcardComponent,
   FooterComponent,
   NavbarComponent
 } from './shared';
@@ -26,7 +27,8 @@ import {
     ResumeComponent,
     ProjectsComponent,
     BlogComponent,
-    Status404Component
+    Status404Component,
+    FlipcardComponent
   ],
   imports: [
     BrowserModule,
