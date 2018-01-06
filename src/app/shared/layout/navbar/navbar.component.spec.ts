@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { APP_BASE_HREF } from '@angular/common';
 import { HomeComponent } from '../../../home/home.component';
 import { ResumeComponent } from '../../../resume/resume.component';
+import { ProjectsComponent } from '../../../projects/projects.component';
 import { ContactComponent } from '../../../contact/contact.component';
 import { NavbarComponent } from './navbar.component';
 import { SharedModule } from '../../shared.module';
@@ -18,6 +19,7 @@ describe('NavbarComponent', () => {
         NavbarComponent,
         HomeComponent,
         ResumeComponent,
+        ProjectsComponent,
         ContactComponent
       ],
       imports: [SharedModule],

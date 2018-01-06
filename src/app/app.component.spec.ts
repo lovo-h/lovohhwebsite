@@ -3,6 +3,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ResumeComponent } from './resume/resume.component';
+import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import {
   SharedModule,
@@ -20,6 +21,7 @@ describe('AppComponent', () => {
         FooterComponent,
         HomeComponent,
         ResumeComponent,
+        ProjectsComponent,
         ContactComponent,
         NavbarComponent,
       ],
