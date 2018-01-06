@@ -19,7 +19,7 @@ describe('ContactComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create ContactPage', () => {
+  it('should create the ContactComponent', () => {
     expect(component).toBeTruthy();
   });
 });

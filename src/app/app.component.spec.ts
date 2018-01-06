@@ -27,7 +27,7 @@ describe('AppComponent', () => {
       providers: [{provide: APP_BASE_HREF, useValue : '/' }],
     }).compileComponents();
   }));
-  it('should create the App', async(() => {
+  it('should create the AppComponent', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();

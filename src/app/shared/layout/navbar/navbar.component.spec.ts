@@ -32,7 +32,7 @@ describe('NavbarComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create the Navbar', () => {
+  it('should create the NavbarComponent', () => {
     expect(component).toBeTruthy();
   });
 });
