@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import {
   SharedModule,
@@ -23,6 +24,7 @@ import {
     ContactComponent,
     ResumeComponent,
     ProjectsComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
