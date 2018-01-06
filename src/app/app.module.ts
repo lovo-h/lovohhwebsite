@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { ResumeComponent } from './resume/resume.component';
 import { ContactComponent } from './contact/contact.component';
 import {
   SharedModule,
@@ -18,7 +19,8 @@ import {
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,

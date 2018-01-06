@@ -2,6 +2,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { APP_BASE_HREF } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { ResumeComponent } from './resume/resume.component';
 import { ContactComponent } from './contact/contact.component';
 import {
   SharedModule,
@@ -18,6 +19,7 @@ describe('AppComponent', () => {
         AppComponent,
         FooterComponent,
         HomeComponent,
+        ResumeComponent,
         ContactComponent,
         NavbarComponent,
       ],
