@@ -6,6 +6,7 @@ import { ResumeComponent } from '../../../resume/resume.component';
 import { ProjectsComponent } from '../../../projects/projects.component';
 import { BlogComponent } from '../../../blog/blog.component';
 import { ContactComponent } from '../../../contact/contact.component';
+import { Status404Component } from '../../../status404/status404.component';
 import { NavbarComponent } from './navbar.component';
 import { SharedModule } from '../../shared.module';
 
@@ -22,7 +23,8 @@ describe('NavbarComponent', () => {
         ResumeComponent,
         ProjectsComponent,
         BlogComponent,
-        ContactComponent
+        ContactComponent,
+        Status404Component
       ],
       imports: [SharedModule],
       providers: [{provide: APP_BASE_HREF, useValue : '/' }],

@@ -6,6 +6,7 @@ import { ResumeComponent } from '../resume/resume.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { BlogComponent } from '../blog/blog.component';
 import { ContactComponent } from '../contact/contact.component';
+import { Status404Component } from '../status404/status404.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,6 +14,7 @@ const appRoutes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'contact', component: ContactComponent },
+  { path: '**', component: Status404Component },
 ];
 
 @NgModule({

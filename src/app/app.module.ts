@@ -8,6 +8,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
+import { Status404Component } from './status404/status404.component';
 import {
   SharedModule,
   FooterComponent,
@@ -24,7 +25,8 @@ import {
     ContactComponent,
     ResumeComponent,
     ProjectsComponent,
-    BlogComponent
+    BlogComponent,
+    Status404Component
   ],
   imports: [
     BrowserModule,
