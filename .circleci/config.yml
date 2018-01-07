@@ -13,6 +13,11 @@ anchor_2: &restore_cache_defaults
       # fallback to using the latest cache if no exact match is found
       - lovohhwebsite-cache-
 
+# Attach workspace that contains dist/
+anchor_3: &attach_workspace_defaults
+    at: ~/workspace
+
+
 jobs:
   build:
     <<: *defaults
@@ -23,10 +28,16 @@ jobs:
       - run: node --version && npm --version
       - run: npm install --no-save
       - run: npm run build
+      - run: mkdir ~/workspace && mv ./dist ~/workspace && mv ./Dockerfile.prod ~/workspace
       - save_cache:
           key: lovohhwebsite-cache-{{ checksum "package-lock.json" }}
           paths:
             - "node_modules"
+      - persist_to_workspace:
+          root: ~/workspace
+          paths:
+            - dist/
+            - Dockerfile.prod
 
   test:
     <<: *defaults
@@ -37,16 +48,20 @@ jobs:
       - run: npm run test
 
   deploy:
-    <<: *defaults
+    working_directory: ~/workspace
+    docker:
+      - image: circleci/node:8.9-stretch-browsers
     steps:
       - checkout
+      - attach_workspace:
+          <<: *attach_workspace_defaults
       - setup_remote_docker:
           docker_layer_caching: true
       - run:
           name: Install Docker client
           command: |
             set -x
-            VER="17.11.0-ce"
+            VER="17.05.0-ce"
             curl -L -o /tmp/docker-$VER.tgz https://get.docker.com/builds/Linux/x86_64/docker-$VER.tgz
             tar -xz -C /tmp -f /tmp/docker-$VER.tgz
             sudo mv /tmp/docker/* /usr/bin
