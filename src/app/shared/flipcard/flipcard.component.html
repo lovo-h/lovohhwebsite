@@ -11,7 +11,7 @@
               <div class="col-12 col-sm-8 lw-card-text">
                 <h3>{{cardInfo.title}}</h3>
                 <span>{{cardInfo.subtitle}}</span>
-                <div class="lw-card-attrs">
+                <div class="lw-card-attrs" appClickStopPropagation>
                   <p *ngFor="let attr of cardInfo.attributes">
                     <a href="{{attr.href}}">{{attr.name}} | {{attr.icon}}</a>
                   </p>
