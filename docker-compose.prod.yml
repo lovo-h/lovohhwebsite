@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+    # =-=-=-=-= CADDY =-=-=-=-=
+    caddy:
+      build:
+        context: .
+        dockerfile: Dockerfile.prod
+      container_name: LWCaddy_prod
+      ports:
+        - "2015:2015"
+      volumes:
+        - $HOME/.caddy:/root/.caddy

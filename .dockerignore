@@ -1,7 +1,7 @@
 node_modules/
 **/*.spec.ts
 docker-compose.*.yml
-Dockerfile
+Dockerfile.*
 .dockerignore
 .editorconfig
 .gitignore

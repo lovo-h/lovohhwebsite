@@ -5,8 +5,8 @@ services:
     angular:
       build:
         context: .
-        dockerfile: Dockerfile
-      container_name: lovohhwebsite_angular2
+        dockerfile: Dockerfile.dev
+      container_name: LWAngular2_dev
       ports:
         - "4200:4200"
       volumes:
