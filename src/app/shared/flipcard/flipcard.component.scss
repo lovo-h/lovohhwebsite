@@ -1,7 +1,3 @@
-@import '~bootstrap/scss/bootstrap-grid.scss';
-@import "../../../styles/_variables";
-
-
 .fc-wrapper {
   perspective: 800px;
 
@@ -25,55 +21,12 @@
       top: 0;
       transform: rotateY(179.9deg);
     }
-  }
-}
 
-// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-$card-textsection-padding: 0.66rem;
-
-.lw-card-shadow {
-  -webkit-box-shadow: 15px 30px 45px 0 rgba(176,176,176,0.9);
-  -moz-box-shadow: 15px 30px 45px 0 rgba(176,176,176,0.9);
-  box-shadow: 15px 30px 45px 0 rgba(176,176,176,0.9);
-  cursor: pointer;
-
-  .lw-card {
-    height: 12.0rem;
-    border: 1px solid grey;
-    background-color: white;
-
-    .lw-card-image {
-      display: none;
-    }
-
-    .lw-card-text {
-      $p-bottom-margin: -0.25rem;
-      padding: $card-textsection-padding;
-
-      .lw-card-attrs {
-        position: absolute;
-        bottom: $card-textsection-padding - $p-bottom-margin;
-        right: $card-textsection-padding;
-
-        p {
-          margin-bottom: $p-bottom-margin;
-        }
-      }
-
-      h3 {
-        margin: 0;
-      }
-    }
-  }
-}
-
-@include media-breakpoint-up(sm) {
-  .lw-card-shadow {
-    .lw-card {
-      .lw-card-image {
-        display: block;
-      }
+    .lw-card-shadow {
+      -webkit-box-shadow: 15px 30px 45px 0 rgba(176,176,176,0.9);
+      -moz-box-shadow: 15px 30px 45px 0 rgba(176,176,176,0.9);
+      box-shadow: 15px 30px 45px 0 rgba(176,176,176,0.9);
+      cursor: pointer;
     }
   }
 }

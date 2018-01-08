@@ -1,0 +1,26 @@
+<app-flipcard>
+  <span front>
+    <div class="row lw-card">
+      <div class="col-4 lw-card-image">
+        <img src="{{cardInfo.image}}">
+      </div>
+      <div class="col-12 col-sm-8 lw-card-text">
+        <h3>{{cardInfo.title}}</h3>
+        <span>{{cardInfo.subtitle}}</span>
+        <div class="lw-card-attrs" appClickStopPropagation>
+          <p *ngFor="let attr of cardInfo.attributes">
+            <a href="{{attr.href}}">{{attr.name}} | {{attr.icon}}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </span>
+
+  <span back>
+    <div class="row lw-card">
+      <div class="col-12 col-md-9 col-lg-8">
+      <!-- insert background image -->
+      </div>
+    </div>
+  </span>
+</app-flipcard>

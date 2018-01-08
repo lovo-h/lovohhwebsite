@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SharedModule, FlipcardComponent } from '../../';
+import { SharedModule, BizCardComponent, FlipcardComponent } from '../../';
 import { NavbarComponent } from './navbar.component';
 
 import { HomeComponent } from '../../../home/home.component';
@@ -27,6 +27,7 @@ describe('NavbarComponent', () => {
         BlogComponent,
         ContactComponent,
         Status404Component,
+        BizCardComponent,
         FlipcardComponent
       ],
       imports: [SharedModule],

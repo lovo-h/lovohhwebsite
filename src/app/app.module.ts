@@ -12,6 +12,7 @@ import { Status404Component } from './status404/status404.component';
 import {
   SharedModule,
   ClickStopPropagationDirective,
+  BizCardComponent,
   FlipcardComponent,
   FooterComponent,
   NavbarComponent
@@ -30,7 +31,8 @@ import {
     BlogComponent,
     Status404Component,
     FlipcardComponent,
-    ClickStopPropagationDirective
+    ClickStopPropagationDirective,
+    BizCardComponent
   ],
   imports: [
     BrowserModule,

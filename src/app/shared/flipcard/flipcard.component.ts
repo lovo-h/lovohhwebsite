@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, style, transition, animate, state } from '@angular/animations';
 
 const CARD_FLIP_ANIMATIONS = [
@@ -21,7 +21,6 @@ const CARD_FLIP_ANIMATIONS = [
   ]
 })
 export class FlipcardComponent implements OnInit {
-  @Input() cardInfo: any;
   cardSide: string;
 
   constructor() {

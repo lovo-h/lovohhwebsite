@@ -7,7 +7,11 @@ import { BlogComponent } from '../blog/blog.component';
 import { ContactComponent } from '../contact/contact.component';
 import { Status404Component } from '../status404/status404.component';
 
-import { FlipcardComponent, SharedModule } from '../shared';
+import {
+  SharedModule,
+  BizCardComponent,
+  FlipcardComponent
+} from '../shared';
 import { APP_BASE_HREF } from '@angular/common';
 
 
@@ -24,12 +28,13 @@ describe('HomeComponent', () => {
         BlogComponent,
         ContactComponent,
         Status404Component,
+        BizCardComponent,
         FlipcardComponent,
       ],
-      imports: [ SharedModule ],
-      providers: [{provide: APP_BASE_HREF, useValue : '/' }],
+      imports: [SharedModule],
+      providers: [{provide: APP_BASE_HREF, useValue: '/'}],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { Status404Component } from './status404/status404.component';
 import {
   SharedModule,
+  BizCardComponent,
   FlipcardComponent,
   FooterComponent,
   NavbarComponent
@@ -28,6 +29,7 @@ describe('AppComponent', () => {
         ContactComponent,
         Status404Component,
         NavbarComponent,
+        BizCardComponent,
         FlipcardComponent
       ],
       imports: [SharedModule],

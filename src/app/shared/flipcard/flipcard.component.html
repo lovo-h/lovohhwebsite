@@ -4,20 +4,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-md-9 col-lg-6 lw-card-shadow" (click)="toggleFlip()">
-            <div class="row lw-card">
-              <div class="col-4 lw-card-image">
-                <img src="{{cardInfo.image}}">
-              </div>
-              <div class="col-12 col-sm-8 lw-card-text">
-                <h3>{{cardInfo.title}}</h3>
-                <span>{{cardInfo.subtitle}}</span>
-                <div class="lw-card-attrs" appClickStopPropagation>
-                  <p *ngFor="let attr of cardInfo.attributes">
-                    <a href="{{attr.href}}">{{attr.name}} | {{attr.icon}}</a>
-                  </p>
-                </div>
-              </div>
-            </div>
+            <ng-content select="[front]"></ng-content>
           </div>
         </div>
       </div>
@@ -27,11 +14,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-md-9 col-lg-6 lw-card-shadow" (click)="toggleFlip()">
-            <div class="row lw-card">
-              <div class="col-12 col-md-9 col-lg-8">
-                <!-- insert background image -->
-              </div>
-            </div>
+            <ng-content select="[back]"></ng-content>
           </div>
         </div>
       </div>

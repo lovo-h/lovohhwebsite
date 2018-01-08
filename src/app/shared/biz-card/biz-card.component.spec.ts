@@ -7,12 +7,12 @@ import { BlogComponent } from '../../blog/blog.component';
 import { ContactComponent } from '../../contact/contact.component';
 import { Status404Component } from '../../status404/status404.component';
 
-import { FlipcardComponent, BizCardComponent, SharedModule } from '../../shared';
+import { BizCardComponent, FlipcardComponent, SharedModule } from '../../shared';
 import { APP_BASE_HREF } from '@angular/common';
 
-describe('FlipcardComponent', () => {
-  let component: FlipcardComponent;
-  let fixture: ComponentFixture<FlipcardComponent>;
+describe('BizCardComponent', () => {
+  let component: BizCardComponent;
+  let fixture: ComponentFixture<BizCardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -33,12 +33,12 @@ describe('FlipcardComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FlipcardComponent);
+    fixture = TestBed.createComponent(BizCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create the FlipcardComponent', () => {
+  it('should create the BizCardComponent', () => {
     expect(component).toBeTruthy();
   });
 });
