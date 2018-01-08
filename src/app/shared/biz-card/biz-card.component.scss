@@ -1,40 +1,49 @@
 @import '~bootstrap/scss/bootstrap-grid.scss';
 
+$card-height: 14.0rem;
 $card-textsection-padding: 0.66rem;
 
-.lw-card {
-  height: 12.0rem;
-  border: 1px solid grey;
-  background-color: white;
+.lw-main-container {
+  margin: 1.0rem 0 2.5rem 0;
 
-  .lw-card-image {
-    display: none;
-  }
+  .lw-card {
+    height: $card-height;
+    border: 1px solid grey;
+    background-color: white;
 
-  .lw-card-text {
-    $p-bottom-margin: -0.25rem;
-    padding: $card-textsection-padding;
-
-    .lw-card-attrs {
-      position: absolute;
-      bottom: $card-textsection-padding - $p-bottom-margin;
-      right: $card-textsection-padding;
-
-      p {
-        margin-bottom: $p-bottom-margin;
-      }
+    .lw-card-image {
+      display: none;
     }
 
-    h3 {
-      margin: 0;
+    .lw-card-text {
+      $p-bottom-margin: -0.25rem;
+      padding: $card-textsection-padding;
+
+      .lw-card-attrs {
+        position: absolute;
+        bottom: $card-textsection-padding - $p-bottom-margin;
+        right: $card-textsection-padding;
+
+        p {
+          margin-bottom: $p-bottom-margin;
+        }
+      }
+
+      h3 {
+        margin: 0;
+      }
     }
   }
 }
 
 @include media-breakpoint-up(sm) {
-  .lw-card {
-    .lw-card-image {
-      display: block;
+  .lw-main-container {
+    margin: 4.0rem 0;
+
+    .lw-card {
+      .lw-card-image {
+        display: block;
+      }
     }
   }
 }
