@@ -4,12 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppRoutingModule } from './app-routing.module';
-
 
 @NgModule({
   imports: [
-    AppRoutingModule,
     BrowserAnimationsModule,
     CommonModule,
     FormsModule,
@@ -17,7 +14,6 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   declarations: [],
   exports: [
-    AppRoutingModule,
     BrowserAnimationsModule,
     CommonModule,
     FormsModule,

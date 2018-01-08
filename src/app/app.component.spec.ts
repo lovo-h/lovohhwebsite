@@ -8,6 +8,7 @@ import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { Status404Component } from './status404/status404.component';
 import {
+  AppRoutingModule,
   SharedModule,
   BizCardComponent,
   FlipcardComponent,
@@ -32,7 +33,7 @@ describe('AppComponent', () => {
         BizCardComponent,
         FlipcardComponent
       ],
-      imports: [SharedModule],
+      imports: [AppRoutingModule, SharedModule],
       providers: [{provide: APP_BASE_HREF, useValue : '/' }],
     }).compileComponents();
   }));

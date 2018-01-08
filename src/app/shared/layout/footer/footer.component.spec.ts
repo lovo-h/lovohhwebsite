@@ -1,8 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SharedModule, BizCardComponent, FlipcardComponent } from '../../';
+import {
+  AppRoutingModule,
+  SharedModule,
+  BizCardComponent,
+  FlipcardComponent
+} from '../../';
 import { FooterComponent } from './footer.component';
-
 import { HomeComponent } from '../../../home/home.component';
 import { ResumeComponent } from '../../../resume/resume.component';
 import { ProjectsComponent } from '../../../projects/projects.component';
@@ -30,10 +34,10 @@ describe('FooterComponent', () => {
         BizCardComponent,
         FlipcardComponent
       ],
-      imports: [ SharedModule ],
-      providers: [{provide: APP_BASE_HREF, useValue : '/' }],
+      imports: [AppRoutingModule, SharedModule],
+      providers: [{provide: APP_BASE_HREF, useValue: '/'}],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

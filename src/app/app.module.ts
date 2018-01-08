@@ -10,6 +10,7 @@ import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { Status404Component } from './status404/status404.component';
 import {
+  AppRoutingModule,
   SharedModule,
   ClickStopPropagationDirective,
   BizCardComponent,
@@ -35,6 +36,7 @@ import {
     BizCardComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     SharedModule,
   ],
