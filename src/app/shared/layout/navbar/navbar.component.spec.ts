@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import {
   AppRoutingModule,
   SharedModule,
+  ProjectCardComponent,
   BizCardComponent,
   FlipcardComponent
 } from '../../';
@@ -31,6 +32,7 @@ describe('NavbarComponent', () => {
         BlogComponent,
         ContactComponent,
         Status404Component,
+        ProjectCardComponent,
         BizCardComponent,
         FlipcardComponent
       ],

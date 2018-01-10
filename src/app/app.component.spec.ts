@@ -10,6 +10,7 @@ import { Status404Component } from './status404/status404.component';
 import {
   AppRoutingModule,
   SharedModule,
+  ProjectCardComponent,
   BizCardComponent,
   FlipcardComponent,
   FooterComponent,
@@ -30,6 +31,7 @@ describe('AppComponent', () => {
         ContactComponent,
         Status404Component,
         NavbarComponent,
+        ProjectCardComponent,
         BizCardComponent,
         FlipcardComponent
       ],

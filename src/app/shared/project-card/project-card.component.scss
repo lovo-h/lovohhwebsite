@@ -1,0 +1,32 @@
+$front-top-section-height: 16.0rem;
+$front-bottom-section-height: 4.0rem;
+
+
+.lw-front-top {
+  height: $front-top-section-height;
+}
+
+.lw-front-bottom {
+  height: $front-bottom-section-height;
+}
+
+.lw-back-all {
+  height: $front-top-section-height + $front-bottom-section-height;
+}
+
+.lw-card-section {
+  border: 1px solid black;
+}
+
+.lw-fill-section {
+  height: 100%;
+}
+
+.lw-card-link {
+  cursor: pointer;
+}
+
+.lw-card-ul {
+  list-style: none;
+  padding: 0;
+}

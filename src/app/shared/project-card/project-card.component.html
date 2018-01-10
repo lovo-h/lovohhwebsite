@@ -1,0 +1,49 @@
+<app-flipcard [cardNum]="cardNum">
+  <span front>
+    <div class="container">
+      <div class="row" (click)="onMouseClick()"
+           (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+        <div class="col-12 lw-card-section lw-front-top">
+          <div class="d-flex justify-content-center text-center lw-fill-section">
+            <div class="align-self-center mt-3">
+              {{cardInfo.title}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 lw-card-section lw-front-bottom">
+          <div class="d-flex justify-content-around text-center lw-fill-section">
+
+            <span class="d-flex justify-content-around w-50 h-100 lw-card-link">
+              <span class="align-self-center">Blog</span>
+            </span>
+            <span class="d-flex justify-content-around w-50 h-100 lw-card-link">
+              <span class="align-self-center">Github</span>
+            </span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </span>
+
+  <span back>
+    <div class="container" (click)="onMouseClick()"
+         (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+      <div class="row">
+        <div class="col-12 lw-card-section lw-back-all">
+          <div class="d-flex justify-content-center text-center lw-fill-section">
+            <div class="align-self-center mt-2">
+              <ul class="lw-card-ul">
+                <li *ngFor="let tool of cardInfo.tools">
+                  {{tool}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </span>
+</app-flipcard>
