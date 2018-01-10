@@ -11,7 +11,9 @@ export class BizCardComponent implements OnInit, OnDestroy {
   private mouseBehavior: BehaviorSubject<string>;
   cardInfo: any;
   cardNum: number;
-  constructor(private mouseservice: MouseStateService) { }
+
+  constructor(private mouseservice: MouseStateService) {
+  }
 
   ngOnInit() {
     this.cardInfo = {
@@ -27,6 +29,14 @@ export class BizCardComponent implements OnInit, OnDestroy {
     this.cardNum = 0;
     this.mouseservice.initMouseStates(1);
     this.mouseBehavior = this.mouseservice.getState(this.cardNum);
+  }
+
+  onMouseEnterRestrictedArea() {
+    this.onMouseLeave();
+  }
+
+  onMouseLeaveRestrictedArea() {
+    this.onMouseEnter();
   }
 
   onMouseClick() {
