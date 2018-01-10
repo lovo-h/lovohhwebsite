@@ -1,13 +1,13 @@
 <div class="fc-wrapper">
   <div class="fc-box" [@flipState]="cardSide" [@tiltState]="cardTilt">
     <div class="fc-box__side fc-box__front">
-        <div class="lw-card-shadow" (click)="toggleFlip()" (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()">
+        <div class="lw-card-shadow">
           <ng-content select="[front]"></ng-content>
         </div>
     </div>
 
     <div class="fc-box__side fc-box__back">
-      <div class="lw-card-shadow" (click)="toggleFlip()" (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()">
+      <div class="lw-card-shadow">
         <ng-content select="[back]"></ng-content>
       </div>
     </div>

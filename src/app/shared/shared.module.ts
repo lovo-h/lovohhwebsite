@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MouseStateService } from './services';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgbModule.forRoot()
   ],
   declarations: [],
+  providers: [MouseStateService],
   exports: [
     BrowserAnimationsModule,
     CommonModule,
