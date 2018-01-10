@@ -1,7 +1,7 @@
-<div class="row justify-content-center lw-main-container" (click)="onMouseClick()"
-     (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+<div class="row justify-content-center lw-main-container">
   <div class="col-12 col-md-9 col-lg-6">
-    <app-flipcard [cardNum]="cardNum">
+    <app-flipcard [cardNum]="cardNum" (click)="onMouseClick()"
+                  (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
       <span front>
         <div class="row lw-card">
           <div class="col-4 lw-card-image">
