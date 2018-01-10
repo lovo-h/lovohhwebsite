@@ -1,0 +1,19 @@
+@import '~bootstrap/scss/bootstrap-grid.scss';
+
+
+.w-auto {
+  width: 100% !important;
+  max-width: 25.0rem;
+}
+
+@include media-breakpoint-up(md) {
+  .w-auto {
+    width: 50% !important;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .w-auto {
+    width: 33% !important;
+  }
+}
