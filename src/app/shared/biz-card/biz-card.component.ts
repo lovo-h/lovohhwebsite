@@ -17,12 +17,13 @@ export class BizCardComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.cardInfo = {
-      title: 'Card Title',
-      subtitle: 'Card Subtitle',
-      image: '/path/to/image.jpg',
+      title: 'Hector Lovo',
+      subtitle: 'Software Engineer',
+      image: 'url(/assets/imgs/hector_lovo.jpg)',
       attributes: [
-        {name: 'Attribute 1', icon: 'Icon 1', href: 'https://www.google.com'},
-        {name: 'Attribute 2', icon: 'Icon 2', href: 'https://www.ask.com'},
+        {name: 'LinkedIn', icon: '', href: 'https://www.linkedin.com/in/lovohh'},
+        {name: 'Github', icon: '', href: 'https://github.com/lovo-h'},
+        {name: 'Email', icon: '', href: 'mailto:lovohh@gmail.com'},
       ]
     };
 

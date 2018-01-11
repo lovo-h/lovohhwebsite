@@ -4,13 +4,12 @@
                   (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
       <span front>
         <div class="row lw-card">
-          <div class="col-4 lw-card-image">
-            <img src="{{cardInfo.image}}">
+          <div class="col-4 lw-card-image" [style.background-image]="cardInfo.image">
           </div>
           <div class="col-12 col-sm-8 lw-card-text">
             <h3>{{cardInfo.title}}</h3>
             <span>{{cardInfo.subtitle}}</span>
-            <div class="lw-card-attrs" #attributesElement (mouseenter)="onMouseEnterRestrictedArea()"
+            <div class="lw-card-attrs text-right" (mouseenter)="onMouseEnterRestrictedArea()"
                  (mouseleave)="onMouseLeaveRestrictedArea()">
               <p *ngFor="let attr of cardInfo.attributes">
                 <a href="{{attr.href}}">{{attr.name}} | {{attr.icon}}</a>

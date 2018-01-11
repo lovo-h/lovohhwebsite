@@ -13,6 +13,8 @@ $card-textsection-padding: 0.66rem;
 
     .lw-card-image {
       display: none;
+      background-size: cover;
+      background-position: right;
     }
 
     .lw-card-text {
