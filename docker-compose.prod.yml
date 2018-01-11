@@ -1,13 +1,13 @@
 version: '2'
 
 services:
-    # =-=-=-=-= CADDY =-=-=-=-=
-    caddy:
+    # =-=-=-=-= Ninx =-=-=-=-=
+    nginx:
       build:
         context: .
         dockerfile: Dockerfile.prod
-      container_name: LWCaddy_prod
+      container_name: LWNginx
       ports:
-        - "2015:2015"
-      volumes:
-        - $HOME/.caddy:/root/.caddy
+        - "80:80"
+        - "443:443"
+      restart: always

@@ -1,8 +1,8 @@
-FROM abiosoft/caddy
+FROM nginx
 LABEL maintainer = "Hector Lovo <lovohh@gmail.com>"
 
 # Copies the "production" version of the app into /srv.
-# Note: This assumes that the directory ./dist exists locally.
-COPY ./dist/ /srv/
+# NOTE: This assumes that the directory ./dist exists locally.
+COPY ./dist/ /usr/share/nginx/html
 
-COPY ./Caddyfile /etc/Caddyfile
+RUN mkdir -p /etc/nginx/ssl/
