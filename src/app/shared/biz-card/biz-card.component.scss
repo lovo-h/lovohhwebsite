@@ -1,3 +1,4 @@
+@import "~bootstrap/scss/functions";
 @import '~bootstrap/scss/bootstrap-grid.scss';
 
 $card-height: 14.0rem;
@@ -18,16 +19,17 @@ $card-textsection-padding: 0.66rem;
     }
 
     .lw-card-text {
-      $p-bottom-margin: -0.25rem;
-      padding: $card-textsection-padding;
+      padding: 0.7rem 1.3rem 0.4rem 0.7rem;
 
-      .lw-card-attrs {
-        position: absolute;
-        bottom: $card-textsection-padding - $p-bottom-margin;
-        right: $card-textsection-padding;
+      .lw-icons {
+        padding: 0 0.3rem;
 
-        p {
-          margin-bottom: $p-bottom-margin;
+        a {
+          color: black;
+        }
+
+        a:hover {
+          color: darkgray;
         }
       }
 

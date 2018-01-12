@@ -21,9 +21,8 @@ export class BizCardComponent implements OnInit, OnDestroy {
       subtitle: 'Software Engineer',
       image: 'url(/assets/imgs/hector_lovo.jpg)',
       attributes: [
-        {name: 'LinkedIn', icon: '', href: 'https://www.linkedin.com/in/lovohh'},
-        {name: 'Github', icon: '', href: 'https://github.com/lovo-h'},
-        {name: 'Email', icon: '', href: 'mailto:lovohh@gmail.com'},
+        {icon: 'fa-linkedin-square', href: 'https://www.linkedin.com/in/lovohh'},
+        {icon: 'fa-github-square', href: 'https://github.com/lovo-h'},
       ]
     };
 

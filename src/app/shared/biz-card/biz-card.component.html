@@ -7,14 +7,25 @@
           <div class="col-4 lw-card-image" [style.background-image]="cardInfo.image">
           </div>
           <div class="col-12 col-sm-8 lw-card-text">
-            <h3>{{cardInfo.title}}</h3>
-            <span>{{cardInfo.subtitle}}</span>
-            <div class="lw-card-attrs text-right" (mouseenter)="onMouseEnterRestrictedArea()"
-                 (mouseleave)="onMouseLeaveRestrictedArea()">
-              <p *ngFor="let attr of cardInfo.attributes">
-                <a href="{{attr.href}}">{{attr.name}} | {{attr.icon}}</a>
-              </p>
-            </div>
+              <div class="row h-50">
+                <div class="col">
+                  <h3>{{cardInfo.title}}</h3>
+                  <span>{{cardInfo.subtitle}}</span>
+                </div>
+              </div>
+              <div class="row h-50 justify-content-end align-items-end">
+                <div class="col-auto"
+                     (mouseenter)="onMouseEnterRestrictedArea()"
+                     (mouseleave)="onMouseLeaveRestrictedArea()">
+                  <div class="row">
+                    <div class="col-auto lw-icons" *ngFor="let attr of cardInfo.attributes">
+                        <a href="{{attr.href}}">
+                          <i class="fa {{attr.icon}} fa-3x" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
       </span>
