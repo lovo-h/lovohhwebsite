@@ -7,13 +7,13 @@
           <div class="col-4 lw-card-image" [style.background-image]="cardInfo.image">
           </div>
           <div class="col-12 col-sm-8 lw-card-text">
-              <div class="row h-50">
+              <div class="row">
                 <div class="col">
                   <h3>{{cardInfo.title}}</h3>
                   <span>{{cardInfo.subtitle}}</span>
                 </div>
               </div>
-              <div class="row h-50 justify-content-end align-items-end">
+              <div class="row lw-card-attrs">
                 <div class="col-auto"
                      (mouseenter)="onMouseEnterRestrictedArea()"
                      (mouseleave)="onMouseLeaveRestrictedArea()">

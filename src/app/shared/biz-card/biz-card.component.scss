@@ -19,7 +19,13 @@ $card-textsection-padding: 0.66rem;
     }
 
     .lw-card-text {
-      padding: 0.7rem 1.3rem 0.4rem 0.7rem;
+      padding: 0.7rem 0 0 0.7rem;
+
+      .lw-card-attrs {
+        position: absolute;
+        right: 1.5rem;
+        bottom: 0.5rem;
+      }
 
       .lw-icons {
         padding: 0 0.3rem;
