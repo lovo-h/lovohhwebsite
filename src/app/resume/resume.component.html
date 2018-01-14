@@ -1,3 +1,129 @@
-<p>
-  resume works!
-</p>
+<div class="row justify-content-center">
+  <div class="col-0 col-lg-2"></div>
+  <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+    <h3>Education</h3>
+  </div>
+  <div class="col-0 col-md-3 col-xl-2"></div>
+</div>
+
+<div class="row justify-content-center" *ngFor="let cdata of collegeData">
+  <div class="col-0 col-lg-2 lw-visible-gte-lg text-center" style="margin: auto 0">
+    <a href="{{cdata.college.homeurl}}">
+      <img src="{{cdata.college.logopath}}">
+    </a>
+  </div>
+
+  <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+    <b>{{cdata.college.name}}</b>, {{cdata.college.location}}
+    <ul>
+      <li *ngFor="let graduation of cdata.graduations">
+        {{graduation.major}}<span class="lw-visible-lt-md">,</span> <span
+        class="lw-visible-lt-md">{{graduation.date}}</span>
+      </li>
+    </ul>
+  </div>
+  <div class="col-0 col-md-3 col-xl-2 lw-visible-gte-md text-right">
+    {{cdata.college.location}}<br/>
+    <span *ngFor="let graduation of cdata.graduations; let idx = index">
+      {{graduation.date}}<br *ngIf="idx<cdata.graduations?.length-1"/>
+    </span>
+  </div>
+</div>
+
+
+<div class="row justify-content-center">
+  <div class="col-0 col-lg-2"></div>
+  <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+    <h3>Relevant Experience</h3>
+  </div>
+  <div class="col-0 col-md-3 col-xl-2"></div>
+</div>
+
+<div class="row justify-content-center" *ngFor="let edata of workExperienceData">
+  <div class="col-0 col-lg-2 lw-visible-gte-lg text-center" style="margin: auto 0">
+    <a href="{{edata.company.webUrl}}">
+      <img src="{{edata.company.logopath}}">
+    </a>
+  </div>
+
+  <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+    <b>{{edata.company.name}}</b>, {{edata.company.location}}
+    <ul>
+      <li *ngFor="let ddata of edata.descriptionData">
+        {{ddata}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-0 col-md-3 col-xl-2 lw-visible-gte-md text-right">
+    {{edata.company.location}}<br/>
+    {{edata.startDate}}<br/>to<br/>{{edata.endDate}}
+  </div>
+</div>
+
+
+<div class="row justify-content-center">
+  <div class="col-0 col-lg-2"></div>
+  <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+    <h3>Skills & Abilities</h3>
+  </div>
+  <div class="col-0 col-md-3 col-xl-2"></div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-0 col-lg-2 lw-visible-gte-lg">
+  </div>
+
+  <div class="col-12 col-md-11 col-lg-9 col-xl-7">
+    <div class="row">
+      <div class="col-12">
+        <p><b>Language</b>: Fluent in written and spoken Spanish</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <b>Relevant Knowledge</b>:
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-start" *ngFor="let kdata of knowledgeData" style="margin: 0 0 1.0rem 0">
+      <div class="col-12" style="text-decoration: underline;">
+        {{kdata.topic}}:
+      </div>
+      <div class="col-4 col-sm-3" *ngFor="let kele of kdata.elements">
+        <span class="lw-visible-lt-sm" [ngClass]="{'lw-txt-sm': kele?.length>10}">{{kele}}</span>
+        <span class="lw-visible-gte-sm">{{kele}}</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="row justify-content-center">
+  <div class="col-0 col-lg-2"></div>
+  <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+    <h3>Leadership & Other Actitivies</h3>
+  </div>
+  <div class="col-0 col-md-3 col-xl-2"></div>
+</div>
+
+<div class="row justify-content-center" *ngFor="let club of otherData.clubs">
+  <div class="col-0 col-lg-2 lw-visible-gte-lg text-center" style="margin: auto 0">
+    <a href="{{club.weburl}}">
+      <img src="{{club.logopath}}">
+    </a>
+  </div>
+
+  <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+    <b>{{club.name}}</b>, {{club.location}}<br>
+    <b class="lw-txt-sm">{{club.participation.title}}</b>
+    <p>
+      {{club.description}}
+    </p>
+  </div>
+  <div class="col-0 col-md-3 col-xl-2 lw-visible-gte-md text-right">
+    {{club.location}}<br/>
+    {{club.participation.startDate}}<br/>to<br/>{{club.participation.endDate}}
+  </div>
+</div>
