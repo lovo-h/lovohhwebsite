@@ -10,5 +10,28 @@ services:
       ports:
         - "4200:4200"
       volumes:
-        - .:/home/app/lovohhwebsite
+        - .:/home/app/lovohhwebsite/
         - /home/app/lovohhwebsite/node_modules
+    golang:
+      build:
+        context: ~/go/src/github.com/lovohh/lovohhwebapi/
+        dockerfile: Dockerfile.dev
+      container_name: LWGolang_Dev
+      ports:
+        - "3000:3000"
+      volumes:
+        - ~/go/src/github.com/lovohh/lovohhwebapi/:/go/src/github.com/lovohh/lovohhwebapi/
+      restart: always
+      environment:
+        LWA_EMAIL_UN: ${EMAIL_UN}
+        LWA_EMAIL_PW: ${EMAIL_PASS}
+    caddy:
+      image: abiosoft/caddy
+      ports:
+        - "2015:2015"
+      links:
+        - angular
+        - golang
+      volumes:
+        - ${HOME}/.caddy:/root/.caddy
+        - ./Caddyfile:/etc/Caddyfile

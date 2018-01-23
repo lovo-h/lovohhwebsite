@@ -11,9 +11,9 @@ ENV APP lovohhwebsite
 
 RUN npm install -g @angular/cli
 
-COPY package.json ${HOME}/${APP}/
-
 WORKDIR ${HOME}/${APP}
+
+COPY package.json ${HOME}/${APP}/
 
 RUN npm install
 
