@@ -1,0 +1,39 @@
+@import '../../styles/variables';
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid $success;
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid $danger;
+}
+
+.lw-captcha-img {
+  width: 100%;
+  height: 3.0rem;
+  border: 1px solid #ced4da;
+  overflow: hidden;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  border-radius: 0.3rem;
+}
+
+textarea {
+  min-height: 5.0rem;
+}
+
+#lw-refresh-icon {
+  font-size: 1.5rem;
+  color: black;
+  position: absolute;
+  right: 0.75rem;
+  top: 0.25rem;
+}
+
+#lw-refresh-icon:hover {
+  color: darkgray;
+}
+
+#lw-submit-btn {
+  width: 100%
+}

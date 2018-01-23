@@ -1,29 +1,75 @@
 <app-biz-card></app-biz-card>
 
 <div class="row d-flex justify-content-center">
-  <div class="col-12 col-md-9 col-lg-6">
+  <div class="col-12 col-md-9 col-lg-6" [hidden]="submitted">
     <h3>
       Contact Me:
     </h3>
-    <form>
+
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="form-group">
-        <input type="text" class="form-control form-control-lg" placeholder="Full Name">
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control form-control-lg" placeholder="Email">
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control form-control-lg" placeholder="Subject">
-      </div>
-      <div class="form-group">
-        <textarea class="form-control form-control-lg" rows="3" placeholder="Message" style="min-height: 5.0rem;"></textarea>
-      </div>
-      <div class="form-row">
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%">Send</button>
+        <input name="name" type="text" class="form-control form-control-lg" placeholder="Full Name" required
+               [(ngModel)]="contactFormModel.name" #name="ngModel">
+        <div [hidden]="!submitAttempt || name.valid || name.pristine" class="alert alert-danger">Your full name is
+          required.
         </div>
       </div>
-    </form>
 
+      <div class="form-group">
+        <input name="email" type="email" class="form-control form-control-lg" placeholder="Email" required
+               [(ngModel)]="contactFormModel.email" #email="ngModel" email="true">
+        <div [hidden]="!submitAttempt || email.valid || email.pristine" class="alert alert-danger">Valid email
+          required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input name="subject" type="text" class="form-control form-control-lg" placeholder="Subject" required
+               [(ngModel)]="contactFormModel.subject" #subject="ngModel">
+        <div [hidden]="!submitAttempt || subject.valid || subject.pristine" class="alert alert-danger">A subject line is
+          required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <textarea name="message" class="form-control form-control-lg" rows="3" placeholder="Message" required
+                  [(ngModel)]="contactFormModel.message" #message="ngModel"></textarea>
+        <div [hidden]="!submitAttempt || message.valid || message.pristine" class="alert alert-danger">Please enter your
+          message.
+        </div>
+      </div>
+
+      <div class="form-row form-group">
+        <div class="col-12 col-sm-6 order-sm-11 mb-3 mb-sm-0 text-center">
+          <img *ngIf="contactFormModel.captchaid" class="ml-sm-auto lw-captcha-img"
+               [src]="'/api/captcha/img/' + contactFormModel.captchaid">
+          <i id="lw-refresh-icon" class="fa fa-refresh" aria-hidden="true" [hidden]="isSubmitting" (click)="reloadCaptchaImage()"></i>
+        </div>
+        <div class="col-12 col-sm-6 order-sm-1">
+          <input name="captchasolution" type="number" class="form-control form-control-lg" placeholder="Type in numbers"
+                 required
+                 [(ngModel)]="contactFormModel.captchasolution" #captchasolution="ngModel">
+        </div>
+        <div class="col-12 order-sm-12">
+          <div [hidden]="!submitAttempt || captchasolution.valid || captchasolution.pristine"
+               class="alert alert-danger">
+            Please type-in the numbers displayed.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <button id="lw-submit-btn" type="submit" class="btn btn-primary btn-lg"
+                [disabled]="!contactForm.form.valid || isSubmitting">
+          Send
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-12 col-md-9 col-lg-6 text-center" [hidden]="!submitted">
+    <h4>Thank you for contacting me.</h4>
+    <p>I look forward to speaking with you.</p>
   </div>
 </div>

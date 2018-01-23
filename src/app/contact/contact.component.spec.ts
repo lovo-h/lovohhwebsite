@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ContactComponent } from './contact.component';
 import {
   SharedModule,
@@ -19,7 +19,8 @@ describe('ContactComponent', () => {
         BizCardComponent,
         FlipcardComponent,
       ],
-      imports: [ SharedModule ],
+      providers: [  ],
+      imports: [ HttpClientTestingModule, SharedModule ],
     })
       .compileComponents();
   }));
