@@ -124,6 +124,13 @@ export class ResumeComponent implements OnInit {
       ]
     },
     {
+      topic: 'Database',
+      elements: [
+        'MongogoDB',
+        'MySQL',
+      ]
+    },
+    {
       topic: 'Framework',
       elements: [
         'Bootstrap', 'Django', 'Angular-CLI'
@@ -132,8 +139,8 @@ export class ResumeComponent implements OnInit {
     {
       topic: 'Tools',
       elements: [
-        'AWS', 'CircleCI', 'Git', 'GoLand', 'Eclipse', 'PHPStorm', 'PyCharm',
-        'SourceTree', 'Visual Studio', 'WebStorm', 'XCode'
+        'Android Studio', 'AWS', 'CircleCI', 'Docker', 'Git', 'GoLand',
+        'Eclipse', 'PHPStorm', 'PyCharm', 'Visual Studio', 'WebStorm', 'XCode'
       ]
     },
     {
