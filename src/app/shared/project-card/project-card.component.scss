@@ -1,9 +1,20 @@
 $front-top-section-height: 16.0rem;
 $front-bottom-section-height: 4.0rem;
 
+.lw-front-image {
+  opacity: 0.33;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+}
 
 .lw-front-top {
   height: $front-top-section-height;
+
+  .lw-card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
 }
 
 .lw-front-bottom {
@@ -24,6 +35,18 @@ $front-bottom-section-height: 4.0rem;
 
 .lw-card-link {
   cursor: pointer;
+}
+
+.lw-gh-link {
+  a {
+    color: #6e5494;
+  }
+}
+
+.lw-blog-link {
+  a {
+    color: black;
+  }
 }
 
 .lw-card-ul {

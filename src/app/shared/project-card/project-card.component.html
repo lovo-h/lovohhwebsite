@@ -3,25 +3,43 @@
     <div class="container">
       <div class="row" (click)="onMouseClick()"
            (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+        <div *ngIf="cardInfo.image" class="col-12 lw-front-top lw-front-image"
+             [style.background-image]="cardInfo.image">
+        </div>
         <div class="col-12 lw-card-section lw-front-top">
           <div class="d-flex justify-content-center text-center lw-fill-section">
-            <div class="align-self-center mt-3">
+            <div class="align-self-center mt-3 lw-card-title">
               {{cardInfo.title}}
             </div>
           </div>
         </div>
       </div>
+
       <div class="row">
         <div class="col-12 lw-card-section lw-front-bottom">
           <div class="d-flex justify-content-around text-center lw-fill-section">
-
-            <span class="d-flex justify-content-around w-50 h-100 lw-card-link">
-              <span class="align-self-center">Blog</span>
+            <span *ngIf="cardInfo.emptyURLText && (!cardInfo.blogUrl || !cardInfo.githubUrl)"
+                  class="d-flex justify-content-around w-50 h-100">
+              <span class="align-self-center">
+                {{cardInfo.emptyURLText}}
+              </span>
             </span>
-            <span class="d-flex justify-content-around w-50 h-100 lw-card-link">
-              <span class="align-self-center">Github</span>
+            <span *ngIf="cardInfo.blogUrl" class="d-flex justify-content-around w-50 h-100 lw-card-link lw-blog-link">
+              <span class="align-self-center">
+                <a [href]="cardInfo.blogUrl">
+                  <i class="fa fa-book mr-1" aria-hidden="true" style="font-size: 1.4rem;"></i>
+                  Blog
+                </a>
+              </span>
             </span>
-
+            <span *ngIf="cardInfo.githubUrl" class="d-flex justify-content-around w-50 h-100 lw-card-link lw-gh-link">
+              <span class="align-self-center">
+                <a [href]="cardInfo.githubUrl">
+                  <i class="fa fa-github mr-1" aria-hidden="true" style="font-size: 1.6rem;"></i>
+                  Github
+                </a>
+              </span>
+            </span>
           </div>
         </div>
       </div>
