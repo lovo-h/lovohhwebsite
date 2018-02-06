@@ -41,21 +41,6 @@ export class ContactComponent implements OnInit, OnDestroy {
       });
   }
 
-  reloadCaptchaImage() {
-    if (this.contactFormModel.captchaid === '') {
-      return;
-    }
-
-    const id = this.contactFormModel.captchaid;
-    this.contactFormModel.captchaid = '';
-
-    this.captchaAPI.reloadCaptchaID(id)
-      .takeWhile(_ => this.exists)
-      .subscribe(_ => {
-        this.contactFormModel.captchaid = id;
-      });
-  }
-
   onSubmit(contactForm: NgForm) {
     const contactFormCopy = Object.assign({}, this.contactFormModel);
     contactFormCopy.captchasolution = contactFormCopy.captchasolution.toString();

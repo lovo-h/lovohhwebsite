@@ -41,9 +41,8 @@
 
       <div class="form-row form-group">
         <div class="col-12 col-sm-6 order-sm-11 mb-3 mb-sm-0 text-center">
-          <img *ngIf="contactFormModel.captchaid" class="ml-sm-auto lw-captcha-img"
-               [src]="'/api/captcha/img/' + contactFormModel.captchaid">
-          <i id="lw-refresh-icon" class="fa fa-refresh" aria-hidden="true" [hidden]="isSubmitting" (click)="reloadCaptchaImage()"></i>
+          <img *ngIf="!isSubmitting" class="ml-sm-auto lw-captcha-img"
+               [src]="'/api/captcha/img/' + contactFormModel.captchaid.toString()">
         </div>
         <div class="col-12 col-sm-6 order-sm-1">
           <input name="captchasolution" type="number" class="form-control form-control-lg" placeholder="Type in numbers"
