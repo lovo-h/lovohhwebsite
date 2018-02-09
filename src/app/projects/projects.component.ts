@@ -77,10 +77,10 @@ export class ProjectsComponent implements OnInit, OnDestroy {
           'HTML5',
           'JavaScript'
         ],
-        githubUrl: 'https://github.com/lovo-h/raspberry_pi',
+        githubUrl: '',
         blogUrl: '',
         image: 'url(/assets/imgs/projects/oldegg.jpg)',
-        emptyURLText: '',
+        emptyURLText: 'Pending',
       },
       {
         title: 'Personal Website (Front End)',
