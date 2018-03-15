@@ -24,7 +24,7 @@
                 {{cardInfo.emptyURLText}}
               </span>
             </span>
-            <span *ngIf="cardInfo.blogUrl" class="d-flex justify-content-around w-50 h-100 lw-card-link lw-blog-link">
+            <span *ngIf="!cardInfo.emptyURLText && cardInfo.blogUrl" class="d-flex justify-content-around w-50 h-100 lw-card-link lw-blog-link">
               <span class="align-self-center">
                 <a [href]="cardInfo.blogUrl">
                   <i class="fa fa-book mr-1" aria-hidden="true" style="font-size: 1.4rem;"></i>
@@ -32,7 +32,7 @@
                 </a>
               </span>
             </span>
-            <span *ngIf="cardInfo.githubUrl" class="d-flex justify-content-around w-50 h-100 lw-card-link lw-gh-link">
+            <span *ngIf="!cardInfo.emptyURLText && cardInfo.githubUrl" class="d-flex justify-content-around w-50 h-100 lw-card-link lw-gh-link">
               <span class="align-self-center">
                 <a [href]="cardInfo.githubUrl">
                   <i class="fa fa-github mr-1" aria-hidden="true" style="font-size: 1.6rem;"></i>
