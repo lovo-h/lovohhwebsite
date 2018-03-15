@@ -102,7 +102,7 @@ export class ResumeComponent implements OnInit {
       startDate: 'Jan 2011',
       endDate: 'Aug 2011',
       descriptionData: [
-        'Researched, ordered, and configured 20 mini-computers designed for efficiency & low maintenance for Staunton’s Public Libraries',
+        'Researched, ordered, and configured 20 mini-computers designed with efficiency & low maintenance for Staunton’s Public Libraries',
         'Documented server information, configured servers, and helped patch security issues'
       ]
     },
@@ -126,7 +126,7 @@ export class ResumeComponent implements OnInit {
     {
       topic: 'Database',
       elements: [
-        'MongogoDB',
+        'MongoDB',
         'MySQL',
       ]
     },
@@ -146,7 +146,7 @@ export class ResumeComponent implements OnInit {
     {
       topic: 'OS',
       elements: [
-        'Linux', 'Macintosh', 'Windows'
+        'Linux', 'MacOS', 'Windows'
       ]
     }
   ];

@@ -69,7 +69,8 @@
   </div>
 
   <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-    <b>{{edata.company.name}}</b>, {{edata.company.location}}
+    <b>{{edata.company.name}}</b>, {{edata.company.location}}<br/>
+    <b class="lw-txt-sm">{{edata.title}}</b>
     <ul>
       <li *ngFor="let ddata of edata.descriptionData">
         {{ddata}}
