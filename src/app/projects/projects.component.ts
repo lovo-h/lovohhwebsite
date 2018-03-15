@@ -43,12 +43,12 @@ export class ProjectsComponent implements OnInit, OnDestroy {
         githubUrl: 'https://github.com/lovo-h/Firp',
         blogUrl: '',
         image: 'url(/assets/imgs/projects/firp.jpg)',
-        emptyURLText: '',
+        emptyURLText: 'Private',
       },
       {
         title: 'Music-Soundbox (Back End)',
         tools: [
-          'GoLang 1.8'
+          'GoLang'
         ],
         githubUrl: 'https://github.com/dtrinh100/Music-Playlist/tree/master/src/api',
         blogUrl: '',
@@ -58,11 +58,11 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       {
         title: 'Music-Soundbox (Front End)',
         tools: [
-          'Angular-CLI 1.3',
-          'Bootstrap 3.3',
+          'Angular-CLI',
+          'Bootstrap',
           'CSS3',
           'HTML5',
-          'Typescript 2.4',
+          'Typescript',
         ],
         githubUrl: 'https://github.com/dtrinh100/Music-Playlist',
         blogUrl: '',
@@ -80,16 +80,16 @@ export class ProjectsComponent implements OnInit, OnDestroy {
         githubUrl: '',
         blogUrl: '',
         image: 'url(/assets/imgs/projects/oldegg.jpg)',
-        emptyURLText: 'Pending',
+        emptyURLText: 'Private',
       },
       {
         title: 'Personal Website (Front End)',
         tools: [
-          'Angular-CLI 1.6',
-          'Bootstrap 4.0',
+          'Angular-CLI',
+          'Bootstrap',
           'CSS3',
           'HTML5',
-          'Typescript 2.6',
+          'Typescript',
         ],
         githubUrl: 'https://github.com/lovo-h/lovohhwebapi',
         blogUrl: '',
@@ -99,7 +99,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       {
         title: 'Personal Website (Back End)',
         tools: [
-          'GoLang 1.9'
+          'GoLang'
         ],
         githubUrl: 'https://github.com/lovo-h/lovohhwebapi',
         blogUrl: '',
