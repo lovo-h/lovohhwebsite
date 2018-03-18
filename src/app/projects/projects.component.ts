@@ -8,7 +8,7 @@ import { MouseStateService } from '../shared/services';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit, OnDestroy {
-  cardInfoList: [any];
+  cardInfoList: any[];
 
   constructor(private mouseservice: MouseStateService) {
   }
