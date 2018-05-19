@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
 import { ContactForm } from '../class';
 import { HttpResponse } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class EmailService {
@@ -10,8 +11,6 @@ export class EmailService {
 
   sendEmail(contactForm: ContactForm) {
     return this.api.post(`${this.emailURL}`, contactForm)
-    .map((res: HttpResponse<any>) => {
-      return res.status === 204;
-    });
+      .pipe(map((res: HttpResponse<any>) => res.status === 204));
   }
 }

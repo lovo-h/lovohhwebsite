@@ -1,7 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { trigger, style, transition, animate, state } from '@angular/animations';
 import { MouseStateService } from '../services';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 
 
 const CARD_FLIP_ANIMATIONS = [

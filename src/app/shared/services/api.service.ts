@@ -1,18 +1,14 @@
+import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-
+import { throwError, Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Injectable()
 export class ApiService {
   private apiUrl = '/api';
 
   private static formatErrors(error: any) {
-    return Observable.throw(error);
+    return throwError(error);
   }
 
   private static setHeaders(): HttpHeaders {
@@ -29,26 +25,27 @@ export class ApiService {
 
   get(path: string, params: HttpParams = new HttpParams()): Observable<any> {
     return this.http.get(`${this.apiUrl}${path}`, {headers: ApiService.setHeaders(), params: params, observe: 'response'})
-      .catch(ApiService.formatErrors);
+      .pipe(catchError(ApiService.formatErrors));
   }
 
   post(path: string, body: Object = {}): Observable<any> {
     return this.http.post(`${this.apiUrl}${path}`, body, {headers: ApiService.setHeaders(), observe: 'response'})
-      .catch(ApiService.formatErrors);
+      .pipe(catchError(ApiService.formatErrors));
   }
 
   put(path: string, body: Object = {}): Observable<any> {
     return this.http.put(`${this.apiUrl}${path}`, body, {headers: ApiService.setHeaders(), observe: 'response'})
-      .catch(ApiService.formatErrors);
+      .pipe(catchError(ApiService.formatErrors));
   }
 
   delete(path): Observable<any> {
     return this.http.delete(`${this.apiUrl}${path}`, {headers: ApiService.setHeaders(), observe: 'response'})
-      .catch(ApiService.formatErrors);
+      .pipe(catchError(ApiService.formatErrors));
   }
 
   patch(path: string, body: Object = {}): Observable<any> {
-    return this.http.patch(`${this.apiUrl}${path}`, body, {headers: ApiService.setHeaders(), observe: 'response'});
+    return this.http.patch(`${this.apiUrl}${path}`, body, {headers: ApiService.setHeaders(), observe: 'response'})
+      .pipe(catchError(ApiService.formatErrors));
   }
 
 }

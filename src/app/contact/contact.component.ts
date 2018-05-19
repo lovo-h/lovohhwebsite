@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ContactForm } from '../shared/class';
 import { CaptchaService, EmailService } from '../shared/services';
-import 'rxjs/add/operator/takeWhile';
+import { takeWhile } from 'rxjs/operators';
 
 
 @Component({
@@ -35,7 +35,7 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   resetCaptchaID() {
     this.captchaAPI.getCaptchaID()
-      .takeWhile(_ => this.exists)
+      .pipe(takeWhile(_ => this.exists))
       .subscribe((id: string) => {
         this.contactFormModel.captchaid = id;
       });
@@ -48,7 +48,7 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.submitAttempt = true;
     this.isSubmitting = true;
     this.emailAPI.sendEmail(contactFormCopy)
-      .takeWhile(_ => this.exists)
+      .pipe(takeWhile(_ => this.exists))
       .subscribe(_ => {
         contactForm.reset();
         this.submitted = true;
