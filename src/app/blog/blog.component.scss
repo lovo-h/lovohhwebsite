@@ -1,0 +1,21 @@
+@import "~bootstrap/scss/functions";
+@import '~bootstrap/scss/bootstrap-grid.scss';
+
+
+.w-auto {
+  width: 100% !important;
+}
+
+
+@include media-breakpoint-up(lg) {
+  .w-auto {
+    max-width: 28.0rem;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .w-auto {
+    max-width: 33.0rem;
+  }
+}
+

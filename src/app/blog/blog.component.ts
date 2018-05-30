@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Blog } from '../shared/class/';
+import { BlogService } from '../shared/services';
 
 @Component({
   selector: 'app-blog',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
+  blogs: Blog[];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
-
 }
