@@ -5,6 +5,7 @@ import { HomeComponent } from '../home/home.component';
 import { ResumeComponent } from '../resume/resume.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { BlogComponent } from '../blog/blog.component';
+import { BlogTemplateComponent } from '../blog-template/blog-template.component';
 import { ContactComponent } from '../contact/contact.component';
 import { Status404Component } from '../status404/status404.component';
 
@@ -13,6 +14,7 @@ const appRoutes: Routes = [
   { path: 'resume', component: ResumeComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'blog', component: BlogComponent },
+  { path: 'blog/:hyphenedTitle', component: BlogTemplateComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', component: Status404Component },
 ];
