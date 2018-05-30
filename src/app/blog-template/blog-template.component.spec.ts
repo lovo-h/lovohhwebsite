@@ -45,6 +45,7 @@ class BlogServiceStub extends BlogService {
         'Temporary Test Title To Test Things That Typically Turn Terribly Tough',
         'temporary-test-title-to-test-things-that-typically-turn-terribly-tough',
         'Test Author',
+        'http://example.com',
         'url(/assets/imgs/projects/raspi.png)',
         'Backend',
         '03/21/1991',
