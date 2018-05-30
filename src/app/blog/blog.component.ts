@@ -10,9 +10,10 @@ import { BlogService } from '../shared/services';
 export class BlogComponent implements OnInit {
   blogs: Blog[];
 
-  constructor() {
+  constructor(private blogAPI: BlogService) {
   }
 
   ngOnInit() {
+    this.blogs = this.blogAPI.getBlogs();
   }
 }

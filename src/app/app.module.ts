@@ -16,7 +16,8 @@ import {
   FlipcardComponent,
   ProjectCardComponent,
   FooterComponent,
-  NavbarComponent
+  NavbarComponent,
+  BlogCardComponent,
 } from './shared';
 
 
@@ -33,7 +34,8 @@ import {
     Status404Component,
     FlipcardComponent,
     BizCardComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    BlogCardComponent,
   ],
   imports: [
     AppRoutingModule,

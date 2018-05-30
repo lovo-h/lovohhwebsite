@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MouseStateService, EmailService, CaptchaService, ApiService } from './services';
+import { MouseStateService, EmailService, CaptchaService, ApiService, BlogService } from './services';
 
 
 @NgModule({
@@ -14,7 +14,7 @@ import { MouseStateService, EmailService, CaptchaService, ApiService } from './s
     NgbModule.forRoot()
   ],
   declarations: [],
-  providers: [ApiService, CaptchaService, EmailService, MouseStateService],
+  providers: [ApiService, BlogService, CaptchaService, EmailService, MouseStateService],
   exports: [
     BrowserAnimationsModule,
     CommonModule,

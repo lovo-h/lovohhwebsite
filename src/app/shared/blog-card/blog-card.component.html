@@ -1,0 +1,63 @@
+<!-- # main container -->
+<div class="row lw-main-container">
+  <div class="col-12 bc-stretch">
+
+    <!-- # 1 conatiner-underlay -->
+    <div class="row">
+      <div class="col-12 bc-image bc-top-card-underlay"
+           [style.background-image]="'url(' + blogObj.imageURL + ')'">
+      </div>
+    </div>
+    <!-- # 1 container -->
+    <div class="row bc-top-card bc-stretch">
+      <div class="col-12 bc-stretch">
+
+        <!-- title -->
+        <a [routerLink]="['/blog/' + blogObj.hyphenedTitle]">
+          <div class="row align-items-center bc-title-container">
+            <div class="col-12">
+              {{ blogObj.title }}
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- # 2 container -->
+    <div class="row bc-bottom-card">
+      <div class="col-12">
+
+        <!-- username & date -->
+        <div class="row" style="height: 2.4rem;">
+          <div class="col-5 col-sm-4 d-flex align-items-center bc-category">
+            <span>{{ blogObj.category }}</span>
+          </div>
+          <div class="col-7 col-sm-8 d-flex align-items-center justify-content-end bc-post-date">
+            <span style="color: gray;">Posted:</span>&nbsp;{{ daysSince(blogObj.date) | number }} days ago
+          </div>
+        </div>
+
+        <!-- excerpt -->
+        <div class="row">
+          <div class="col-12" style="padding-top: 1.0rem;">
+            {{ blogObj.excerpt }}
+          </div>
+        </div>
+
+        <!-- crumb-bar -->
+        <div class="row justify-content-between bc-crumbbar">
+          <div class="col-6">
+            {{ blogObj.readTime }} min read
+          </div>
+          <div class="col-6 text-right">
+            <!-- TODO: waiting for backend -->
+            <!--{{ blogObj.viewsCount | number }} views-->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
