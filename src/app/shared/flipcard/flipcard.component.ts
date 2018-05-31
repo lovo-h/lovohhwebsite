@@ -28,8 +28,7 @@ const CARD_TILT_ANIMATIONS = [
   state('tilted-back', style({
     transform: 'rotateY(169.9deg)'
   })),
-  transition('untilted-front => tilted-front', animate('500ms ease-out')),
-  transition('tilted-front => untilted-front', animate('500ms ease-out')),
+  transition('untilted-front <=> tilted-front', animate('500ms ease-out')),
   transition('untilted-back => tilted-back', animate('500ms ease-out')),
   // TODO: bug: card flips a lot if user hovers mouse in/out rapidly, if ms > 0
   transition('tilted-back => untilted-back', animate('0ms ease-out'))
@@ -81,6 +80,7 @@ export class FlipcardComponent implements OnInit, OnDestroy {
 
   mouseClick() {
     this.cardSide = (this.cardSide === 'back') ? 'front' : 'back';
+    this.cardTilt = 'untilted-' + this.cardSide;
   }
 
   mouseEnter() {
