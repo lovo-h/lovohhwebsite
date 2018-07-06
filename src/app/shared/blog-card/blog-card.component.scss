@@ -12,7 +12,7 @@ $card-height: 29.0rem;
   height: $card-height;
 
   .bc-image {
-    opacity: 0.20;
+    opacity: 0.15;
     background-size: cover;
     background-position: center;
   }
@@ -20,6 +20,7 @@ $card-height: 29.0rem;
   .bc-top-card-underlay {
     position: absolute;
     height: 40%;
+    background-color: $gray-400;
   }
 
   .bc-top-card {

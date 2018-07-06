@@ -1,5 +1,7 @@
 @import "~bootstrap/scss/functions";
 @import '~bootstrap/scss/bootstrap-grid.scss';
+@import '../../styles/variables';
+
 
 .bt-author-date {
   text-align: center;
@@ -9,13 +11,20 @@
 .bt-banner {
   margin: 1.0rem 0 2.0rem 0;
   height: 24.0rem;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
+  background-color: $gray-100;
 }
 
 :host ::ng-deep {
   h1 {
     text-align: center;
+  }
+  h2 {
+    margin: 3.0rem 0 1.5rem 0;
+    font-weight: bold;
+    color: $lw-title-blue;
   }
   h3 {
     margin: 1.0rem 0 0.6rem 0;
@@ -36,15 +45,12 @@
       margin-bottom: 0;
     }
   }
-  img {
-    width: 100%;
-  }
 
   .bt-dir {
-    color: saddlebrown;
+    color: gray;
   }
   .bt-file {
-    color: sandybrown;
+    color: darkgray;
   }
   .bt-file, .bt-dir {
     font-weight: bold;
@@ -59,12 +65,30 @@
   .bt-cmd-in, .bt-cmd-out {
     background-color: black;
   }
-  .bt-code, .bt-cmd-in, .bt-cmd-out {
+  .bt-code, .bt-cmd-in, .bt-cmd-out, .bt-fmt-txt {
     padding: 0.5rem 0 0.5rem 0.5rem;
     font-size: 0.8rem;
   }
   .bt-cmd-out, .bt-code, img, blockquote {
     margin-bottom: 1.5rem;
+  }
+  .bt-img {
+    text-align: center;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  .bt-highlight-code {
+    color: #439696;
+    font-weight: bold;
+  }
+  .bt-fmt-txt {
+    background-color: rgba(0,0,0,0);
+    font-size: 1rem;
+  }
+  .bt-underline {
+    text-decoration: underline;
   }
 }
 
