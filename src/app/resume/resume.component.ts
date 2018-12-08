@@ -112,9 +112,8 @@ export class ResumeComponent implements OnInit {
     {
       topic: 'Programming Language',
       elements: [
-        'C', 'C#', 'C++', 'GoLang', 'Java', 'JavaScript',
-        'NodeJS', 'Objective-C', 'PHP', 'Python', 'SQL',
-        'Swift', 'TypeScript', 'Visual Basic'
+        'GoLang', 'JavaScript', 'NodeJS', 'Objective-C', 'Python', 'SQL',
+        'Swift', 'TypeScript'
       ]
     },
     {
@@ -126,8 +125,7 @@ export class ResumeComponent implements OnInit {
     {
       topic: 'Database',
       elements: [
-        'MongoDB',
-        'MySQL',
+        'MongoDB', 'MySQL', 'NoSQL'
       ]
     },
     {
@@ -139,8 +137,8 @@ export class ResumeComponent implements OnInit {
     {
       topic: 'Tools',
       elements: [
-        'Android Studio', 'AWS', 'CircleCI', 'Docker', 'Git', 'GoLand',
-        'Eclipse', 'PHPStorm', 'PyCharm', 'Visual Studio', 'WebStorm', 'XCode'
+        'AWS', 'CircleCI', 'Docker', 'Git', 'Github', 'Gitlab', 'GoLand',
+        'PyCharm', 'Visual Studio', 'WebStorm', 'XCode'
       ]
     },
     {
