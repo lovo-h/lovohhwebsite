@@ -28,6 +28,10 @@ body {
   margin-bottom: 0.66 * $footer-margins;
 }
 
+.lw-highlight {
+  font-weight: bold;
+}
+
 /* For Firefox */
 input[type='number'] {
   -moz-appearance:textfield;

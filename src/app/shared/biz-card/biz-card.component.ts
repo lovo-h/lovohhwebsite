@@ -23,6 +23,7 @@ export class BizCardComponent implements OnInit, OnDestroy {
       attributes: [
         {icon: 'fa-linkedin-square', href: 'https://www.linkedin.com/in/lovohh'},
         {icon: 'fa-github-square', href: 'https://github.com/lovo-h'},
+        {icon: 'fa-gitlab', href: 'https://gitlab.com/lovo-h'}
       ]
     };
 
