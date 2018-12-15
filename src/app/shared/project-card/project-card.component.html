@@ -1,4 +1,5 @@
 <app-flipcard [cardNum]="cardNum">
+
   <span front>
     <div class="container">
       <div class="row" (click)="onMouseClick()"
@@ -14,29 +15,21 @@
           </div>
         </div>
       </div>
-
       <div class="row">
         <div class="col-12 lw-card-section lw-front-bottom">
           <div class="d-flex justify-content-around text-center lw-fill-section">
-            <span *ngIf="cardInfo.emptyURLText && (!cardInfo.blogUrl || !cardInfo.githubUrl)"
+            <span *ngIf="!cardInfo.buttons || cardInfo.buttons.length === 0"
                   class="d-flex justify-content-around w-50 h-100">
               <span class="align-self-center">
-                {{cardInfo.emptyURLText}}
+                {{cardInfo.emptyButtonsText}}
               </span>
             </span>
-            <span *ngIf="!cardInfo.emptyURLText && cardInfo.blogUrl" class="d-flex justify-content-around w-50 h-100 lw-card-link lw-blog-link">
+            <span *ngFor="let btn of cardInfo.buttons"
+                  class="d-flex justify-content-around w-50 h-100 lw-card-link {{btn.extraStyling}}">
               <span class="align-self-center">
-                <a [href]="cardInfo.blogUrl">
-                  <i class="fa fa-book mr-1" aria-hidden="true" style="font-size: 1.4rem;"></i>
-                  Blog
-                </a>
-              </span>
-            </span>
-            <span *ngIf="!cardInfo.emptyURLText && cardInfo.githubUrl" class="d-flex justify-content-around w-50 h-100 lw-card-link lw-gh-link">
-              <span class="align-self-center">
-                <a [href]="cardInfo.githubUrl">
-                  <i class="fa fa-github mr-1" aria-hidden="true" style="font-size: 1.6rem;"></i>
-                  Github
+                <a [href]="btn.url">
+                  <i class="fa {{btn.faImage}}" aria-hidden="true" style="font-size: 1.4rem;"></i>
+                  {{btn.text}}
                 </a>
               </span>
             </span>
@@ -64,4 +57,5 @@
       </div>
     </div>
   </span>
+
 </app-flipcard>

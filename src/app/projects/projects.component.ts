@@ -17,6 +17,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     this.cardInfoList = [
       {
         title: 'Alzheimer\'s Association',
+        image: 'url(/assets/imgs/projects/alz.png)',
         tools: [
           'DJango',
           'Python 2',
@@ -24,39 +25,88 @@ export class ProjectsComponent implements OnInit, OnDestroy {
           'CSS3',
           'JavaScript'
         ],
-        githubUrl: '',
-        blogUrl: '',
-        image: 'url(/assets/imgs/projects/alz.png)',
-        emptyURLText: 'Private',
+        buttons: [],
+        emptyButtonsText: 'Private',
       },
       {
         title: 'DunGen',
-        tools: ['Python 2'],
-        githubUrl: 'https://github.com/lovo-h/dun_gen',
-        blogUrl: '',
         image: 'url(/assets/imgs/projects/dungen.png)',
-        emptyURLText: '',
+        tools: ['Python 2'],
+        buttons: [
+          {
+            url: 'https://github.com/lovo-h/dun_gen',
+            faImage: 'fa-github',
+            text: 'Github',
+            extraStyling: 'lw-gh-link'
+          },
+        ],
+        emptyButtonsText: 'Private',
       },
       {
         title: 'F.I.R.P',
-        tools: ['C#'],
-        githubUrl: 'https://github.com/lovo-h/Firp',
-        blogUrl: '',
         image: 'url(/assets/imgs/projects/firp.jpg)',
-        emptyURLText: 'Private',
+        tools: ['C#'],
+        buttons: [
+          {
+            url: 'https://github.com/lovo-h/Firp',
+            faImage: 'fa-github',
+            text: 'Github',
+            extraStyling: 'lw-gh-link'
+          },
+        ],
+        emptyButtonsText: 'Private',
+      },
+      {
+        title: 'Food Acidity (Back End)',
+        image: '',
+        tools: ['GoLang'],
+        buttons: [
+          {
+            url: 'https://gitlab.com/lovo-h/FoodAcidityAPI',
+            faImage: 'fa-gitlab',
+            text: 'Gitlab',
+            extraStyling: 'lw-gl-link'
+          },
+        ],
+        emptyButtonsText: 'Private',
+      },
+      {
+        title: 'Food Acidity (Front End)',
+        image: 'url(/assets/imgs/projects/foodacidity.png)',
+        tools: [
+          'Angular-CLI',
+          'Bootstrap',
+          'CSS3',
+          'HTML5',
+          'Typescript'
+        ],
+        buttons: [
+          {
+            url: 'https://gitlab.com/lovo-h/FoodAcidity',
+            faImage: 'fa-gitlab',
+            text: 'Gitlab',
+            extraStyling: 'lw-gl-link'
+          },
+        ],
+        emptyButtonsText: 'Private',
       },
       {
         title: 'Music-Soundbox (Back End)',
-        tools: [
-          'GoLang'
-        ],
-        githubUrl: 'https://github.com/dtrinh100/Music-Playlist/tree/master/src/api',
-        blogUrl: '',
         image: '',
-        emptyURLText: '',
+        tools: ['GoLang'],
+        buttons: [
+          {
+            url: 'https://github.com/dtrinh100/Music-Playlist/tree/master/src/api',
+            faImage: 'fa-github',
+            text: 'Github',
+            extraStyling: 'lw-gh-link'
+          },
+        ],
+        emptyButtonsText: 'Private',
       },
       {
         title: 'Music-Soundbox (Front End)',
+        image: 'url(/assets/imgs/projects/musicplaylist.png)',
         tools: [
           'Angular-CLI',
           'Bootstrap',
@@ -64,26 +114,45 @@ export class ProjectsComponent implements OnInit, OnDestroy {
           'HTML5',
           'Typescript',
         ],
-        githubUrl: 'https://github.com/dtrinh100/Music-Playlist',
-        blogUrl: '',
-        image: 'url(/assets/imgs/projects/musicplaylist.png)',
-        emptyURLText: '',
+        buttons: [
+          {
+            url: 'https://github.com/dtrinh100/Music-Playlist',
+            faImage: 'fa-github',
+            text: 'Github',
+            extraStyling: 'lw-gh-link'
+          },
+        ],
+        emptyButtonsText: 'Private',
       },
       {
         title: 'OldEgg (Front End)',
+        image: 'url(/assets/imgs/projects/oldegg.jpg)',
         tools: [
           'Bootstrap',
           'CSS3',
           'HTML5',
           'JavaScript'
         ],
-        githubUrl: '',
-        blogUrl: '',
-        image: 'url(/assets/imgs/projects/oldegg.jpg)',
-        emptyURLText: 'Private',
+        buttons: [],
+        emptyButtonsText: 'Private',
+      },
+      {
+        title: 'Personal Website (Back End)',
+        image: '',
+        tools: ['GoLang'],
+        buttons: [
+          {
+            url: 'https://github.com/lovo-h/lovohhwebsiteapi',
+            faImage: 'fa-github',
+            text: 'Github',
+            extraStyling: 'lw-gh-link'
+          },
+        ],
+        emptyButtonsText: 'Private',
       },
       {
         title: 'Personal Website (Front End)',
+        image: 'url(/assets/imgs/projects/personalpage.png)',
         tools: [
           'Angular-CLI',
           'Bootstrap',
@@ -91,40 +160,48 @@ export class ProjectsComponent implements OnInit, OnDestroy {
           'HTML5',
           'Typescript',
         ],
-        githubUrl: 'https://github.com/lovo-h/lovohhwebapi',
-        blogUrl: '',
-        image: 'url(/assets/imgs/projects/personalpage.png)',
-        emptyURLText: '',
-      },
-      {
-        title: 'Personal Website (Back End)',
-        tools: [
-          'GoLang'
+        buttons: [
+          {
+            url: 'https://github.com/lovo-h/lovohhwebapp',
+            faImage: 'fa-github',
+            text: 'Github',
+            extraStyling: 'lw-gh-link'
+          },
         ],
-        githubUrl: 'https://github.com/lovo-h/lovohhwebapi',
-        blogUrl: '',
-        image: '',
-        emptyURLText: '',
+        emptyButtonsText: 'Private',
       },
       {
         title: 'SoundLight (Android & Raspberry Pi)',
+        image: 'url(/assets/imgs/projects/raspi.png)',
         tools: [
           'Android Studio',
           'Java',
           'Python',
         ],
-        githubUrl: 'https://github.com/lovo-h/raspberry_pi',
-        blogUrl: '',
-        image: 'url(/assets/imgs/projects/raspi.png)',
-        emptyURLText: '',
+        buttons: [
+          {
+            url: 'https://github.com/lovo-h/raspberry_pi',
+            faImage: 'fa-github',
+            text: 'Github',
+            extraStyling: 'lw-gh-link'
+          },
+        ],
+        emptyButtonsText: 'Private',
       },
       {
         title: 'Sudoku Solver',
-        tools: ['Scala'],
-        githubUrl: 'https://github.com/lovo-h/sudoku_solver',
-        blogUrl: '',
         image: 'url(/assets/imgs/projects/sudoku.jpg)',
-        emptyURLText: '',
+        tools: ['Scala'],
+        buttons: [
+          {
+            url: 'https://github.com/lovo-h/sudoku_solver',
+            faImage: 'fa-github',
+            text: 'Github',
+            extraStyling: 'lw-gh-link'
+          },
+
+        ],
+        emptyButtonsText: 'Private',
       },
     ];
 
