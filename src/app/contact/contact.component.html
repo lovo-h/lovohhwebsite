@@ -7,26 +7,11 @@
     </h3>
 
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-      <div class="form-group">
-        <input name="name" type="text" class="form-control form-control-lg" placeholder="Full Name" required
-               [(ngModel)]="contactFormModel.name" #name="ngModel">
-        <div [hidden]="!submitAttempt || name.valid || name.pristine" class="alert alert-danger">Your full name is
-          required.
-        </div>
-      </div>
 
       <div class="form-group">
         <input name="email" type="email" class="form-control form-control-lg" placeholder="Email" required
                [(ngModel)]="contactFormModel.email" #email="ngModel" email="true">
         <div [hidden]="!submitAttempt || email.valid || email.pristine" class="alert alert-danger">Valid email
-          required.
-        </div>
-      </div>
-
-      <div class="form-group">
-        <input name="subject" type="text" class="form-control form-control-lg" placeholder="Subject" required
-               [(ngModel)]="contactFormModel.subject" #subject="ngModel">
-        <div [hidden]="!submitAttempt || subject.valid || subject.pristine" class="alert alert-danger">A subject line is
           required.
         </div>
       </div>

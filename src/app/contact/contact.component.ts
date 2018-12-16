@@ -14,7 +14,6 @@ export class ContactComponent implements OnInit, OnDestroy {
   exists: boolean;
   isSubmitting: boolean;
   submitAttempt: boolean;
-  submitted: boolean;
   contactFormModel: ContactForm;
 
   constructor(private captchaAPI: CaptchaService, private emailAPI: EmailService) {
@@ -23,14 +22,13 @@ export class ContactComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.exists = true;
     this.submitAttempt = false;
-    this.submitted = false;
     this.isSubmitting = false;
     this.resetContactForm();
     this.resetCaptchaID();
   }
 
   resetContactForm() {
-    this.contactFormModel = new ContactForm('', '', '', '', '', '');
+    this.contactFormModel = new ContactForm( '', '', '', '');
   }
 
   resetCaptchaID() {
@@ -47,11 +45,11 @@ export class ContactComponent implements OnInit, OnDestroy {
 
     this.submitAttempt = true;
     this.isSubmitting = true;
+
     this.emailAPI.sendEmail(contactFormCopy)
       .pipe(takeWhile(_ => this.exists))
       .subscribe(_ => {
         contactForm.reset();
-        this.submitted = true;
       }, _ => {
         this.contactFormModel.captchasolution = '';
         this.resetCaptchaID();
