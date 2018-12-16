@@ -14,6 +14,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   exists: boolean;
   isSubmitting: boolean;
   submitAttempt: boolean;
+  submitted: boolean;   // needed to hide 'Contact Me' Form
   contactFormModel: ContactForm;
 
   constructor(private captchaAPI: CaptchaService, private emailAPI: EmailService) {
@@ -21,8 +22,9 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.exists = true;
-    this.submitAttempt = false;
     this.isSubmitting = false;
+    this.submitAttempt = false;
+    this.submitted = false;
     this.resetContactForm();
     this.resetCaptchaID();
   }
@@ -50,6 +52,7 @@ export class ContactComponent implements OnInit, OnDestroy {
       .pipe(takeWhile(_ => this.exists))
       .subscribe(_ => {
         contactForm.reset();
+        this.submitted = true;
       }, _ => {
         this.contactFormModel.captchasolution = '';
         this.resetCaptchaID();
