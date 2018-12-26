@@ -55,5 +55,14 @@ $card-textsection-padding: 0.66rem;
         display: block;
       }
     }
+
+    .lw-back-card {
+      background-color: #1C1A1B;
+      color: $gray-100;
+
+      .lw-back-initials {
+        font-size: 2.5rem;
+      }
+    }
   }
 }
