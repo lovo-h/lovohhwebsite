@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 $front-top-section-height: 16.0rem;
 $front-bottom-section-height: 4.0rem;
 
@@ -52,6 +54,12 @@ $front-bottom-section-height: 4.0rem;
 .lw-blog-link {
   a {
     color: black;
+  }
+}
+
+.lw-demo-link {
+  a {
+    color: $success;
   }
 }
 

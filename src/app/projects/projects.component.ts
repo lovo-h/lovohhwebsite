@@ -62,6 +62,12 @@ export class ProjectsComponent implements OnInit, OnDestroy {
         tools: ['GoLang'],
         buttons: [
           {
+            url: 'https://lovohh.com/foodacidity/',
+            faImage: 'fa-window-restore',
+            text: 'Demo',
+            extraStyling: 'lw-demo-link'
+          },
+          {
             url: 'https://gitlab.com/lovo-h/FoodAcidityAPI',
             faImage: 'fa-gitlab',
             text: 'Gitlab',
@@ -81,6 +87,12 @@ export class ProjectsComponent implements OnInit, OnDestroy {
           'Typescript'
         ],
         buttons: [
+          {
+            url: 'https://lovohh.com/foodacidity/',
+            faImage: 'fa-window-restore',
+            text: 'Demo',
+            extraStyling: 'lw-demo-link'
+          },
           {
             url: 'https://gitlab.com/lovo-h/FoodAcidity',
             faImage: 'fa-gitlab',

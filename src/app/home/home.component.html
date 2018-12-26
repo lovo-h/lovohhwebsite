@@ -33,3 +33,21 @@
     </p>
   </div>
 </div>
+
+<hr style="margin-bottom: 2.5rem;" />
+
+<div class="row">
+  <div class="col-md-12 text-left">
+    <h3><strong>Recent Projects:</strong></h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 text-center">
+    <div class="d-flex justify-content-start flex-wrap">
+      <span class="w-auto px-3 py-4" *ngFor="let cardInfo of cardInfoList; let idx = index;">
+        <app-project-card [cardNum]="idx+1" [cardInfo]="cardInfo"></app-project-card>
+      </span>
+    </div>
+  </div>
+</div>
