@@ -4,7 +4,8 @@ import { HomeComponent } from './home.component';
 import {
   SharedModule,
   BizCardComponent,
-  FlipcardComponent
+  FlipcardComponent,
+  ProjectCardComponent
 } from '../shared';
 
 
@@ -18,6 +19,7 @@ describe('HomeComponent', () => {
         HomeComponent,
         BizCardComponent,
         FlipcardComponent,
+        ProjectCardComponent
       ],
       imports: [ SharedModule ],
 
