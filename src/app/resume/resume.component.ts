@@ -12,12 +12,12 @@ export class ResumeComponent implements OnInit {
         name: 'University of Virginia',
         location: 'Charlottesville, VA',
         homeurl: 'http://www.virginia.edu/',
-        logopath: '/assets/imgs/uva_logo.png'
+        logopath: '/assets/imgs/uva_logo.png',
       },
       graduations: [
         {
           date: 'May 2015',
-          major: 'Bachelor of Science in Computer Science'
+          major: 'Bachelor of Science in Computer Science',
         }
       ]
     },
@@ -26,16 +26,16 @@ export class ResumeComponent implements OnInit {
         name: 'Blue Ridge Community College',
         location: 'Weyers Cave, VA',
         homeurl: 'https://www.brcc.edu/',
-        logopath: '/assets/imgs/brcc_logo.jpg'
+        logopath: '/assets/imgs/brcc_logo.jpg',
       },
       graduations: [
         {
           date: 'May 2012',
-          major: 'Associate of Arts and Sciences in Computer Science'
+          major: 'Associate of Arts and Sciences in Computer Science',
         },
         {
           date: 'May 2011',
-          major: 'Associate of Applied Sciences in Information System Technologies'
+          major: 'Associate of Applied Sciences in Information System Technologies',
         }
       ]
     }
@@ -54,8 +54,8 @@ export class ResumeComponent implements OnInit {
       startDate: 'May 2015',
       endDate: 'Feb 2016',
       descriptionData: [
-        'Used XCode, Objective-C / Swift to develop iOS apps and Github for code reviews',
-        'Followed the Scrum Framework and participated in code-development meetings'
+        'Used XCode, Objective-C / Swift to develop iOS apps and Github for code reviews.',
+        'Followed the Scrum Framework and participated in code-development meetings.',
       ]
     },
     {
@@ -70,8 +70,8 @@ export class ResumeComponent implements OnInit {
       startDate: 'Aug 2013',
       endDate: 'Jan 2014',
       descriptionData: [
-        'Designed and coded a website for a national conference: Innovations in Policing',
-        'Used Visual Basic to integrate new features into a MS Word app used to track info'
+        'Designed and coded a website for a national conference: Innovations in Policing.',
+        'Used Visual Basic to integrate new features into a MS Word app used to track info.',
       ]
     },
     {
@@ -86,8 +86,8 @@ export class ResumeComponent implements OnInit {
       startDate: 'Jan 2013',
       endDate: 'May 2013',
       descriptionData: [
-        'Tutored: Computer Science, Web Development, and Math subjects',
-        'Teacher-assisted Computer Science 202 in a class of about 20 students'
+        'Tutored: Computer Science, Web Development, and Math subjects.',
+        'Teacher-assisted Computer Science 202 in a class of about 20 students.'
       ]
     },
     {
@@ -102,18 +102,23 @@ export class ResumeComponent implements OnInit {
       startDate: 'Jan 2011',
       endDate: 'Aug 2011',
       descriptionData: [
-        'Researched, ordered, and configured 20 mini-computers designed with efficiency & low maintenance for Staunton’s Public Libraries',
-        'Documented server information, configured servers, and helped patch security issues'
+        'Researched, ordered, and configured 20 mini-computers designed with efficiency & low maintenance for Staunton’s Public Libraries.',
+        'Documented server information, configured servers, and helped patch security issues.'
       ]
     },
   ];
 
   knowledgeData = [
     {
-      topic: 'Programming Language',
+      topic: 'Database',
       elements: [
-        'GoLang', 'JavaScript', 'NodeJS', 'Objective-C', 'Python', 'SQL',
-        'Swift', 'TypeScript'
+        'MongoDB', 'MySQL', 'NoSQL', 'SQL',
+      ]
+    },
+    {
+      topic: 'Framework',
+      elements: [
+        'Angular2+', 'Bootstrap', 'Django', 'ReactJS',
       ]
     },
     {
@@ -123,30 +128,25 @@ export class ResumeComponent implements OnInit {
       ]
     },
     {
-      topic: 'Database',
+      topic: 'OS',
       elements: [
-        'MongoDB', 'MySQL', 'NoSQL'
+        'Linux', 'MacOS', 'Windows'
       ]
     },
     {
-      topic: 'Framework',
+      topic: 'Programming Language',
       elements: [
-        'Bootstrap', 'Django', 'Angular-CLI'
+        'C#', 'GoLang', 'JavaScript', 'NodeJS', 'Objective-C', 'PHP',
+        'Python', 'Swift', 'TypeScript'
       ]
     },
     {
       topic: 'Tools',
       elements: [
-        'AWS', 'CircleCI', 'Docker', 'Git', 'Github', 'Gitlab', 'GoLand',
-        'PyCharm', 'Visual Studio', 'WebStorm', 'XCode'
+        'AWS', 'CircleCI', 'Docker', 'Git', 'Github', 'Gitlab',
+        'Jetbrains IDEs', 'Visual Studio', 'XCode'
       ]
     },
-    {
-      topic: 'OS',
-      elements: [
-        'Linux', 'MacOS', 'Windows'
-      ]
-    }
   ];
 
   otherData = {
@@ -155,8 +155,8 @@ export class ResumeComponent implements OnInit {
         name: 'STEM Club',
         location: 'Weyers Cave, VA',
         description: 'Created to provide students at Blue Ridge Community College with ' +
-        'information and opportunities in the fields of Science, Technology, Engineering, ' +
-        'and Mathematics',
+          'information and opportunities in the fields of Science, Technology, Engineering, ' +
+          'and Mathematics.',
         weburl: 'http://brccstemclub.com/',
         logopath: '/assets/imgs/stem_logo.png',
         participation: {
@@ -169,8 +169,8 @@ export class ResumeComponent implements OnInit {
         name: 'Alpha Beta Gamma',
         location: 'Weyers Cave, VA',
         description: 'Honor Society established by business professors in 1970 to recognize and ' +
-        'encourage scholarship among Business and Professional Students Enrolled at Two-year ' +
-        'Degree Granting Institutions',
+          'encourage scholarship among Business and Professional Students Enrolled at Two-year ' +
+          'Degree Granting Institutions.',
         weburl: 'http://www.abg.org/',
         logopath: '/assets/imgs/abg_logo.gif',
         participation: {
@@ -182,7 +182,7 @@ export class ResumeComponent implements OnInit {
       {
         name: 'Phi Theta Kappa',
         location: 'Weyers Cave, VA',
-        description: 'The world\'s largest and most prestigious honor society for two-year college students',
+        description: 'The world\'s largest and most prestigious honor society for two-year college students.',
         weburl: 'https://www.ptk.org/',
         logopath: '/assets/imgs/ptk_logo.jpg',
         participation: {
