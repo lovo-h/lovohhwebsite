@@ -44,6 +44,22 @@ export class ResumeComponent implements OnInit {
   workExperienceData = [
     {
       company: {
+        name: 'Chiedo Labs',
+        shortName: 'Chiedo Labs',
+        webUrl: 'https://labs.chiedo.com/',
+        logopath: '/assets/imgs/chiedob_logo.png',
+        location: 'Harrisonburg, VA',
+      },
+      title: 'Mid-Level Software Developer',
+      startDate: 'Jan 2019',
+      endDate: 'Present',
+      descriptionData: [
+        'Developed web apps with NodeJS, ReactJS, & Redux.',
+        'Containerized web apps using Docker.',
+      ]
+    },
+    {
+      company: {
         name: 'WillowTree Inc.',
         shortName: 'WillowTree Inc.',
         webUrl: 'https://willowtreeapps.com/',
