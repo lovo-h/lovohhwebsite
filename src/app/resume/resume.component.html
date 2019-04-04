@@ -11,13 +11,9 @@
   <div class="col-0 col-lg-2"></div>
   <div class="col-12 col-md-10 col-lg-8 col-xl-6">
     <p>
-      My short-term goal is to continue to grow my web
-      app development skills by applying to backend
-      development positions.
-
-      My long-term goal is to learn more about creating
-      a successful startup by seeking employment at a company
-      that would allow me to get involved in various projects.
+      My objective is to continue to improve my software development skills
+      by seeking employment at a company that would allow me to get involved
+      in the development of various web applications.
     </p>
   </div>
   <div class="col-0 col-md-1 col-xl-1"></div>
@@ -39,7 +35,8 @@
     </a>
   </div>
   <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-    <b>{{cdata.college.name}}</b>, {{cdata.college.location}}
+    <b>{{cdata.college.name}}</b>
+    <span class="lw-visible-lt-md">, {{cdata.college.location}}</span>
     <ul>
       <li *ngFor="let graduation of cdata.graduations">
         {{graduation.major}}<span class="lw-visible-lt-md">,</span> <span
@@ -72,7 +69,7 @@
   </div>
 
   <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-    <b>{{edata.company.name}}</b>, {{edata.company.location}}<br/>
+    <b>{{edata.company.name}}</b><span class="lw-visible-lt-md">, {{edata.company.location}}</span><br/>
     <b class="lw-txt-sm">{{edata.title}}</b>
     <ul>
       <li *ngFor="let ddata of edata.descriptionData">
@@ -82,7 +79,7 @@
   </div>
   <div class="col-0 col-md-3 col-xl-2 lw-visible-gte-md text-right">
     {{edata.company.location}}<br/>
-    {{edata.startDate}}<br/>to<br/>{{edata.endDate}}
+    {{edata.startDate}}<br/>to&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>{{edata.endDate}}
   </div>
 </div>
 
@@ -96,13 +93,14 @@
 </div>
 
 <div class="row justify-content-center">
+
   <div class="col-0 col-lg-2 lw-visible-gte-lg">
   </div>
 
   <div class="col-12 col-md-11 col-lg-9 col-xl-7">
     <div class="row">
       <div class="col-12">
-        <p><b>Language</b>: Fluent in written and spoken Spanish</p>
+        <p><b>Language</b>: Fluent in written and spoken Spanish.</p>
       </div>
     </div>
 
@@ -142,7 +140,7 @@
   </div>
 
   <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-    <b>{{club.name}}</b>, {{club.location}}<br>
+    <b>{{club.name}}</b><span class="lw-visible-lt-md">, {{club.location}}</span><br>
     <b class="lw-txt-sm">{{club.participation.title}}</b>
     <p>
       {{club.description}}
@@ -150,6 +148,6 @@
   </div>
   <div class="col-0 col-md-3 col-xl-2 lw-visible-gte-md text-right">
     {{club.location}}<br/>
-    {{club.participation.startDate}}<br/>to<br/>{{club.participation.endDate}}
+    {{club.participation.startDate}}<br/>to&nbsp;&nbsp;<br/>{{club.participation.endDate}}
   </div>
 </div>
